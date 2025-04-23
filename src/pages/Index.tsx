@@ -1,3 +1,4 @@
+
 import { useState, useRef } from "react";
 import { ArrowLeft, ArrowRight, Search, Phone, Clock, DollarSign, Users, Star, Mail, Briefcase, Check, Send, BrainCircuit, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -672,4 +673,59 @@ const Index = () => {
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-4 text-vet-soft-purple">Get In Touch</h3>
-                <div className="space-
+                <div className="space-y-2 mb-4">
+                  <p className="flex items-center justify-center gap-2">
+                    <Phone className="h-4 w-4 text-vet-primary-purple" />
+                    <span>+64212550493</span>
+                  </p>
+                  <p className="flex items-center justify-center gap-2">
+                    <Mail className="h-4 w-4 text-vet-primary-purple" />
+                    <span>alt@alcutman.com</span>
+                  </p>
+                </div>
+                <div className="flex justify-center">
+                  <div className="w-16 h-1 bg-vet-primary-purple rounded-full"></div>
+                </div>
+              </div>
+            </div>
+            <div className="inline-block px-6 py-3 rounded-full bg-vet-primary-purple bg-opacity-20 text-vet-primary-purple font-medium">
+              Thank you for your consideration
+            </div>
+          </div>
+        </Slide>
+      </div>
+
+      {/* Navigation Controls */}
+      <div className="fixed bottom-8 left-0 right-0 flex justify-center items-center gap-4 z-20">
+        <Button 
+          variant="outline"
+          size="icon"
+          onClick={goToPrevSlide}
+          disabled={currentSlide === 0}
+          className="bg-white shadow-md"
+        >
+          <ArrowLeft className="h-4 w-4" />
+        </Button>
+        
+        <NavigationDots 
+          totalSlides={totalSlides} 
+          currentSlide={currentSlide} 
+          onDotClick={goToSlide} 
+          className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-md"
+        />
+        
+        <Button 
+          variant="outline"
+          size="icon"
+          onClick={goToNextSlide}
+          disabled={currentSlide === totalSlides - 1}
+          className="bg-white shadow-md"
+        >
+          <ArrowRight className="h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export default Index;
