@@ -1,4 +1,3 @@
-
 import { useState, useRef } from "react";
 import { ArrowLeft, ArrowRight, Search, Phone, Clock, DollarSign, Users, Star, Mail, Briefcase, Check, Send, BrainCircuit, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -201,7 +200,7 @@ const Index = () => {
           <SlideTitle>Go Further: Your Website's AI Assistant</SlideTitle>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="absolute -right-4 -top-4 bg-vet-primary-purple text-white text-lg font-bold py-2 px-4 rounded-full transform rotate-12 shadow-lg">
+              <div className="absolute -left-4 -top-4 bg-vet-primary-purple text-white text-lg font-bold py-2 px-4 rounded-full transform -rotate-12 shadow-lg z-10">
                 Upgrade Option
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg relative">
